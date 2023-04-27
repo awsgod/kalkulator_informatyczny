@@ -26,12 +26,6 @@ Kluczowe cechy biblioteki bitset to:
 
 Biblioteka bitset jest szczególnie przydatna w przypadku manipulowania i przetwarzania danych w postaci binarnej, np. w przypadku pracy z plikami binarnymi lub protokołami komunikacyjnymi, gdzie dane przesyłane są w postaci bitowej.
 
-Ten kod zawiera dwie funkcje: "zamien_na_u1" oraz "zamien_na_u2". Obie służą do zamiany liczby na jej binarną reprezentację za pomocą kodów U1 i U2.
-
-Funkcja "zamien_na_u1" przyjmuje na wejściu unsigned int "liczba" i zwraca bitset<8> zawierający binarną reprezentację tej liczby w kodzie U1. W kodzie znajduje się stała "maksymalna_wartosc_u1", która reprezentuje największą liczbę, jaką można zapisać w kodzie U1. Jeśli przekazana liczba na wejściu jest większa niż ta wartość, to funkcja przypisuje jej wartość maksymalną. Następnie zwraca bitset<8> reprezentujący podaną liczbę w kodzie U1.
-
-Funkcja "zamien_na_u2" przyjmuje na wejściu int "liczba" i zwraca bitset<8> zawierający binarną reprezentację tej liczby w kodzie U2. W kodzie znajdują się stałe "maksymalna_wartosc_u2" i "minimalna_wartosc_u2", które reprezentują odpowiednio największą i najmniejszą liczbę, jaką można zapisać w kodzie U2. Funkcja sprawdza, czy przekazana liczba jest większa niż wartość "maksymalna_wartosc_u2" lub mniejsza niż wartość "minimalna_wartosc_u2". Jeśli tak, funkcja przypisuje do liczby wartość maksymalną lub minimalną. Następnie zwraca bitset<8> reprezentujący podaną liczbę w kodzie U2.
-
 Funkcja zamien_na_u1 przyjmuje nieujemną liczbę całkowitą jako argument i zwraca jej binarną reprezentację w kodzie U1. Kod U1 to kod, który służy do reprezentowania wartości nieujemnych i zawiera 8 bitów. Funkcja najpierw sprawdza, czy przekazana liczba jest większa niż maksymalna wartość, którą można zapisywać w kodzie U1 (255). Jeśli liczba jest większa, zostaje przypisana jej maksymalna wartość. Następnie funkcja zwraca binarną reprezentację liczby w kodzie U1 jako obiekt bitset<8>.
 
 Funkcja zamien_na_u2 przyjmuje liczbę całkowitą jako argument i zwraca jej binarną reprezentację w kodzie U2. Kod U2 to kod, który służy do reprezentowania wartości całkowitych i zawiera 8 bitów. Funkcja najpierw sprawdza, czy przekazana liczba mieści się w przedziale wartości, które można zapisać w kodzie U2 (-128 do 127). Jeśli liczba jest większa niż 127, zostaje przypisana jej wartość 127. Jeśli liczba jest mniejsza niż -128, zostaje przypisana jej wartość -128. Następnie funkcja zwraca binarną reprezentację liczby w kodzie U2 jako obiekt bitset<8>.
